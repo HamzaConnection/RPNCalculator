@@ -66,6 +66,13 @@ public class Stack<T>
                         push((T) result);
                     }
                     
+                    if (data[top-1].equals("-"))
+                    {
+                        Integer result = Integer.parseInt(data[top-3].toString()) - Integer.parseInt(data[top-2].toString());
+                        top = top-3;
+                        push((T) result);
+                    }
+                    
                 }
             }
             
